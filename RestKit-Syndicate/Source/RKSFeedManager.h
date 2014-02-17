@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import <RestKit.h>
+#import <RestKit/CoreData.h>
+#import <RKXMLDictionarySerialization.h>
 
 @class RKSFeed, RKSChannel, RKSItem, RKSImage;
 
@@ -15,4 +17,5 @@
 @property (nonatomic, strong) RKObjectManager *objectManager;
 @property (nonatomic, strong) NSManagedObjectModel *managedObjectModel;
 @property (nonatomic, strong) RKManagedObjectStore *managedObjectStore;
+-(id)initWithUrl:(NSURL*)baseURL andStoreName:(NSString*)storeName;
 @end

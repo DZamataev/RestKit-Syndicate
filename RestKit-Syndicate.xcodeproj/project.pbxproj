@@ -29,6 +29,7 @@
 		92F4BDE518B24A4600BFD380 /* RKSImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F4BDE018B24A4600BFD380 /* RKSImage.m */; };
 		92F4BDE618B24A4600BFD380 /* RKSItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F4BDE218B24A4600BFD380 /* RKSItem.m */; };
 		92F4BDE918B24AB900BFD380 /* RKSFeedManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F4BDE818B24AB900BFD380 /* RKSFeedManager.m */; };
+		92F4BDF818B24FC700BFD380 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92F4BDF718B24FC700BFD380 /* CoreData.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		92F4BDE218B24A4600BFD380 /* RKSItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKSItem.m; sourceTree = "<group>"; };
 		92F4BDE718B24AB900BFD380 /* RKSFeedManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKSFeedManager.h; sourceTree = "<group>"; };
 		92F4BDE818B24AB900BFD380 /* RKSFeedManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKSFeedManager.m; sourceTree = "<group>"; };
+		92F4BDF718B24FC700BFD380 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92F4BDF818B24FC700BFD380 /* CoreData.framework in Frameworks */,
 				92BEE872188D0B7F004F2267 /* CoreGraphics.framework in Frameworks */,
 				92BEE874188D0B7F004F2267 /* UIKit.framework in Frameworks */,
 				92BEE870188D0B7F004F2267 /* Foundation.framework in Frameworks */,
@@ -126,6 +129,7 @@
 		92BEE86E188D0B7F004F2267 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				92F4BDF718B24FC700BFD380 /* CoreData.framework */,
 				92BEE86F188D0B7F004F2267 /* Foundation.framework */,
 				92BEE871188D0B7F004F2267 /* CoreGraphics.framework */,
 				92BEE873188D0B7F004F2267 /* UIKit.framework */,

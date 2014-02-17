@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+@class RKSFeedManager;
 
 @interface RKSViewController : UIViewController
-
+@property (strong, nonatomic) IBOutlet UITextField *feedUrlTextField;
+@property (strong, nonatomic) IBOutlet UITextField *storeNameTextField;
+@property (strong, nonatomic) RKSFeedManager *feedManager;
+- (IBAction)loadFeed:(id)sender;
 @end

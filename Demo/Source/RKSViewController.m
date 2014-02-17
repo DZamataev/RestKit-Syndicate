@@ -7,6 +7,7 @@
 //
 
 #import "RKSViewController.h"
+#import "RKSFeedManager.h"
 
 @interface RKSViewController ()
 
@@ -26,4 +27,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)loadFeed:(id)sender {
+    self.feedManager = [[RKSFeedManager alloc] initWithUrl:[NSURL URLWithString:self.feedUrlTextField.text]
+                                              andStoreName:self.storeNameTextField.text];
+}
 @end
