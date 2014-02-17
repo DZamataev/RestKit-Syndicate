@@ -1,0 +1,5 @@
+platform :ios, '7.0'
+pod 'RestKit'
+pod 'CocoaLumberjack'
+pod 'XMLDictionary', :git => 'https://github.com/DZamataev/XMLDictionary.git', :branch => 'master'
+pod 'RKXMLDictionarySerialization', :git => 'https://github.com/DZamataev/RKXMLDictionarySerialization.git', :branch => 'master'

@@ -1,0 +1,60 @@
+PODS:
+  - AFNetworking (1.3.3)
+  - CocoaLumberjack (1.8.1):
+    - CocoaLumberjack/Extensions
+  - CocoaLumberjack/Core (1.8.1)
+  - CocoaLumberjack/Extensions (1.8.1):
+    - CocoaLumberjack/Core
+  - ISO8601DateFormatterValueTransformer (0.5.0):
+    - RKValueTransformers (~> 1.0.0)
+  - RestKit (0.22.0):
+    - RestKit/Core
+  - RestKit/Core (0.22.0):
+    - RestKit/CoreData
+    - RestKit/Network
+    - RestKit/ObjectMapping
+  - RestKit/CoreData (0.22.0)
+  - RestKit/Network (0.22.0):
+    - AFNetworking (~> 1.3.0)
+    - RestKit/ObjectMapping
+    - RestKit/Support
+    - SOCKit
+  - RestKit/ObjectMapping (0.22.0):
+    - ISO8601DateFormatterValueTransformer (~> 0.5.0)
+    - RestKit/Support
+    - RKValueTransformers (~> 1.0.1)
+  - RestKit/Support (0.22.0):
+    - TransitionKit (= 2.0.0)
+  - RKValueTransformers (1.0.1)
+  - RKXMLDictionarySerialization (1.0.0):
+    - RestKit
+  - SOCKit (1.1)
+  - TransitionKit (2.0.0)
+  - XMLDictionary (1.3)
+
+DEPENDENCIES:
+  - CocoaLumberjack
+  - RestKit
+  - RKXMLDictionarySerialization (from `https://github.com/DZamataev/RKXMLDictionarySerialization.git`, branch `master`)
+  - XMLDictionary (from `https://github.com/DZamataev/XMLDictionary.git`, branch `master`)
+
+EXTERNAL SOURCES:
+  RKXMLDictionarySerialization:
+    :branch: master
+    :git: https://github.com/DZamataev/RKXMLDictionarySerialization.git
+  XMLDictionary:
+    :branch: master
+    :git: https://github.com/DZamataev/XMLDictionary.git
+
+SPEC CHECKSUMS:
+  AFNetworking: 61fdd49e2ffe6380378df37b3b6e70630bb9dd66
+  CocoaLumberjack: 020378ec400d658923bf5887178394f65f052c90
+  ISO8601DateFormatterValueTransformer: d0af1f50a9df42db72d7418db31938b8473e0af8
+  RestKit: dc107a0aa4f962575ad0385bac5b3c5e4f591f4e
+  RKValueTransformers: 1562d458b9c9d59ce777bfc5982f2e1aef2e9182
+  RKXMLDictionarySerialization: cc1e599a60bee9a92e3f08ce0f883923629d090b
+  SOCKit: 2f3bc4d07910de12dcc202815e07db68a3802581
+  TransitionKit: 433284465abacdc07852d7db6dd0cc075010059a
+  XMLDictionary: 27390d3517062694ccb307a7750250e1b687571d
+
+COCOAPODS: 0.27.1
