@@ -2,7 +2,7 @@
 //  RKSFeed.h
 //  RestKit-Syndicate
 //
-//  Created by Denis Zamataev on 2/17/14.
+//  Created by Denis Zamataev on 2/18/14.
 //  Copyright (c) 2014 DZamataev. All rights reserved.
 //
 
@@ -14,6 +14,7 @@
 @interface RKSFeed : NSManagedObject
 
 @property (nonatomic, retain) NSString * version;
+@property (nonatomic, retain) NSString * requestUrl;
 @property (nonatomic, retain) NSSet *channels;
 @property (nonatomic, retain) RKSImage *image;
 @end

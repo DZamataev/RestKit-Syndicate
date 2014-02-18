@@ -1,46 +1,47 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3401" systemVersion="13B42" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="RKSChannel" representedClassName="RKSChannel" syncable="YES">
+    <entity name="Channel" representedClassName="RKSChannel" syncable="YES">
         <attribute name="descriptionAttribute" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="docsAttribute" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="generatorAttribute" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="languageAttribute" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="lastBuildDateAttribute" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="linkAttribute" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="managingEditorAttribute" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="pubDateAttribute" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="titleAttribute" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="docs" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="generator" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="language" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastBuildDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="link" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="managingEditor" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pubDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="webMasterAttribute" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="feed" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RKSFeed" inverseName="channels" inverseEntity="RKSFeed" syncable="YES"/>
-        <relationship name="image" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RKSImage" inverseName="channels" inverseEntity="RKSImage" syncable="YES"/>
-        <relationship name="items" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="RKSItem" inverseName="channel" inverseEntity="RKSItem" syncable="YES"/>
+        <relationship name="feed" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Feed" inverseName="channels" inverseEntity="Feed" syncable="YES"/>
+        <relationship name="image" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Image" inverseName="channels" inverseEntity="Image" syncable="YES"/>
+        <relationship name="items" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Item" inverseName="channel" inverseEntity="Item" syncable="YES"/>
     </entity>
-    <entity name="RKSFeed" representedClassName="RKSFeed" syncable="YES">
+    <entity name="Feed" representedClassName="RKSFeed" syncable="YES">
+        <attribute name="requestUrl" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="version" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="channels" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="RKSChannel" inverseName="feed" inverseEntity="RKSChannel" syncable="YES"/>
-        <relationship name="image" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RKSImage" inverseName="feeds" inverseEntity="RKSImage" syncable="YES"/>
+        <relationship name="channels" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Channel" inverseName="feed" inverseEntity="Channel" syncable="YES"/>
+        <relationship name="image" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Image" inverseName="feeds" inverseEntity="Image" syncable="YES"/>
     </entity>
-    <entity name="RKSImage" representedClassName="RKSImage" syncable="YES">
-        <attribute name="linkAttribute" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="titleAttribute" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="urlAttribute" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="channels" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="RKSChannel" inverseName="image" inverseEntity="RKSChannel" syncable="YES"/>
-        <relationship name="feeds" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="RKSFeed" inverseName="image" inverseEntity="RKSFeed" syncable="YES"/>
-        <relationship name="items" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="RKSItem" inverseName="image" inverseEntity="RKSItem" syncable="YES"/>
+    <entity name="Image" representedClassName="RKSImage" syncable="YES">
+        <attribute name="link" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="channels" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Channel" inverseName="image" inverseEntity="Channel" syncable="YES"/>
+        <relationship name="feeds" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Feed" inverseName="image" inverseEntity="Feed" syncable="YES"/>
+        <relationship name="items" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Item" inverseName="image" inverseEntity="Item" syncable="YES"/>
     </entity>
-    <entity name="RKSItem" representedClassName="RKSItem" syncable="YES">
+    <entity name="Item" representedClassName="RKSItem" syncable="YES">
         <attribute name="descriptionAttribute" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="guidAttribute" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="linkAttribute" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="pubDateAttribute" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="titleAttribute" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="channel" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RKSChannel" inverseName="items" inverseEntity="RKSChannel" syncable="YES"/>
-        <relationship name="image" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RKSImage" inverseName="items" inverseEntity="RKSImage" syncable="YES"/>
+        <attribute name="guid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="link" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pubDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="channel" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Channel" inverseName="items" inverseEntity="Channel" syncable="YES"/>
+        <relationship name="image" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Image" inverseName="items" inverseEntity="Image" syncable="YES"/>
     </entity>
     <elements>
-        <element name="RKSChannel" positionX="558" positionY="104" width="128" height="238"/>
-        <element name="RKSFeed" positionX="187" positionY="-108" width="128" height="88"/>
-        <element name="RKSImage" positionX="1042" positionY="-72" width="128" height="133"/>
-        <element name="RKSItem" positionX="835" positionY="347" width="128" height="148"/>
+        <element name="Channel" positionX="558" positionY="104" width="128" height="238"/>
+        <element name="Feed" positionX="187" positionY="-108" width="128" height="103"/>
+        <element name="Image" positionX="1042" positionY="-72" width="128" height="133"/>
+        <element name="Item" positionX="835" positionY="347" width="128" height="148"/>
     </elements>
 </model>

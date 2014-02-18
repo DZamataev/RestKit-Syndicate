@@ -2,7 +2,7 @@
 //  RKSItem.m
 //  RestKit-Syndicate
 //
-//  Created by Denis Zamataev on 2/17/14.
+//  Created by Denis Zamataev on 2/18/14.
 //  Copyright (c) 2014 DZamataev. All rights reserved.
 //
 
@@ -14,10 +14,10 @@
 @implementation RKSItem
 
 @dynamic descriptionAttribute;
-@dynamic guidAttribute;
-@dynamic linkAttribute;
-@dynamic pubDateAttribute;
-@dynamic titleAttribute;
+@dynamic guid;
+@dynamic link;
+@dynamic pubDate;
+@dynamic title;
 @dynamic channel;
 @dynamic image;
 

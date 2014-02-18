@@ -10,6 +10,7 @@
 #import <RestKit.h>
 #import <RestKit/CoreData.h>
 #import <RKXMLDictionarySerialization.h>
+#import "RKSMapper.h"
 
 @class RKSFeed, RKSChannel, RKSItem, RKSImage;
 
@@ -17,5 +18,8 @@
 @property (nonatomic, strong) RKObjectManager *objectManager;
 @property (nonatomic, strong) NSManagedObjectModel *managedObjectModel;
 @property (nonatomic, strong) RKManagedObjectStore *managedObjectStore;
--(id)initWithUrl:(NSURL*)baseURL andStoreName:(NSString*)storeName;
+- (id)initWithUrl:(NSURL*)baseURL andStoreName:(NSString*)storeName;
+- (void)loadFeedAtPath:(NSString*)feedPath ofType:(RKSFeedType)feedType
+       withRootKeyPath:(NSString*)rootKeyPath andParameters:(NSDictionary*)parameters
+    andCompletionBlock:(void (^)(RKSFeed *feed, NSError *error, BOOL isOld))completionBlock;
 @end

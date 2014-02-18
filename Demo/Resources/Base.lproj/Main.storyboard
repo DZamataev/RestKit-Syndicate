@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="RKSViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pdu-Fl-Q1m"/>
+                        <viewControllerLayoutGuide type="bottom" id="OVB-JM-st3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="http://w-o-s.ru/rss" borderStyle="roundedRect" placeholder="feed url" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T0X-GA-DSN">
+                                <rect key="frame" x="13" y="36" width="287" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O5m-ui-T8y">
+                                <rect key="frame" x="166" y="70" width="134" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="134" id="WGV-7T-rLK"/>
+                                </constraints>
+                                <state key="normal" title="Load feed">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loadFeed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="5Kr-Ox-q7I"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="rss_store.sqlite" borderStyle="roundedRect" placeholder="store name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QZm-TM-tuA">
+                                <rect key="frame" x="13" y="70" width="145" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" text="nothing loaded yet" translatesAutoresizingMaskIntoConstraints="NO" id="tMh-7I-icm">
+                                <rect key="frame" x="13" y="108" width="287" height="447"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tMh-7I-icm" firstAttribute="trailing" secondItem="O5m-ui-T8y" secondAttribute="trailing" id="1bh-8G-txC"/>
+                            <constraint firstItem="T0X-GA-DSN" firstAttribute="trailing" secondItem="O5m-ui-T8y" secondAttribute="trailing" id="4Me-xe-Ot7"/>
+                            <constraint firstItem="tMh-7I-icm" firstAttribute="top" secondItem="QZm-TM-tuA" secondAttribute="bottom" constant="8" symbolic="YES" id="Cj1-2J-0Eu"/>
+                            <constraint firstItem="T0X-GA-DSN" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="13" id="KlB-LO-Zbi"/>
+                            <constraint firstItem="QZm-TM-tuA" firstAttribute="leading" secondItem="tMh-7I-icm" secondAttribute="leading" id="LTi-Os-gLr"/>
+                            <constraint firstItem="OVB-JM-st3" firstAttribute="top" secondItem="tMh-7I-icm" secondAttribute="bottom" constant="13" id="WfQ-IM-eBI"/>
+                            <constraint firstItem="T0X-GA-DSN" firstAttribute="leading" secondItem="QZm-TM-tuA" secondAttribute="leading" id="hum-sX-SFI"/>
+                            <constraint firstAttribute="trailing" secondItem="T0X-GA-DSN" secondAttribute="trailing" constant="20" symbolic="YES" id="oqw-Xk-wja"/>
+                            <constraint firstItem="tMh-7I-icm" firstAttribute="top" secondItem="O5m-ui-T8y" secondAttribute="bottom" constant="8" symbolic="YES" id="pct-4n-q9u"/>
+                            <constraint firstItem="T0X-GA-DSN" firstAttribute="top" secondItem="pdu-Fl-Q1m" secondAttribute="bottom" constant="16" id="ug6-Pr-GkQ"/>
+                            <constraint firstItem="O5m-ui-T8y" firstAttribute="leading" secondItem="QZm-TM-tuA" secondAttribute="trailing" constant="8" symbolic="YES" id="wcc-Dn-7BO"/>
+                            <constraint firstItem="QZm-TM-tuA" firstAttribute="top" secondItem="T0X-GA-DSN" secondAttribute="bottom" constant="4" id="xo2-td-1Kn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="feedUrlTextField" destination="T0X-GA-DSN" id="Np2-Lb-Cpp"/>
+                        <outlet property="resultTextView" destination="tMh-7I-icm" id="rgf-oT-s7u"/>
+                        <outlet property="storeNameTextField" destination="QZm-TM-tuA" id="2ex-lr-1z0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

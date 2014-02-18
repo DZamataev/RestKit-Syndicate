@@ -2,7 +2,7 @@
 //  RKSChannel.h
 //  RestKit-Syndicate
 //
-//  Created by Denis Zamataev on 2/17/14.
+//  Created by Denis Zamataev on 2/18/14.
 //  Copyright (c) 2014 DZamataev. All rights reserved.
 //
 
@@ -14,15 +14,15 @@
 @interface RKSChannel : NSManagedObject
 
 @property (nonatomic, retain) NSString * descriptionAttribute;
-@property (nonatomic, retain) NSString * docsAttribute;
-@property (nonatomic, retain) NSString * generatorAttribute;
-@property (nonatomic, retain) NSString * languageAttribute;
-@property (nonatomic, retain) NSString * lastBuildDateAttribute;
-@property (nonatomic, retain) NSString * linkAttribute;
-@property (nonatomic, retain) NSString * managingEditorAttribute;
-@property (nonatomic, retain) NSString * pubDateAttribute;
-@property (nonatomic, retain) NSString * titleAttribute;
-@property (nonatomic, retain) NSString * webMasterAttribute;
+@property (nonatomic, retain) NSString * docs;
+@property (nonatomic, retain) NSString * generator;
+@property (nonatomic, retain) NSString * language;
+@property (nonatomic, retain) NSString * lastBuildDate;
+@property (nonatomic, retain) NSString * link;
+@property (nonatomic, retain) NSString * managingEditor;
+@property (nonatomic, retain) NSString * pubDate;
+@property (nonatomic, retain) NSString * title;
+@property (nonatomic, retain) NSString * webMaster;
 @property (nonatomic, retain) RKSFeed *feed;
 @property (nonatomic, retain) RKSImage *image;
 @property (nonatomic, retain) NSSet *items;

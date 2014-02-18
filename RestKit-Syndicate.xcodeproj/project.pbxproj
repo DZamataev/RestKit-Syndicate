@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		07F1258EC0DB41AE94664FA4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29B4DBB9E1664A1990CF526B /* libPods.a */; };
+		92BAE0F318B342F400E45DEF /* RKSMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 92BAE0F218B342F400E45DEF /* RKSMapper.m */; };
+		92BAE10218B34A9B00E45DEF /* RKSItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 92BAE10118B34A9B00E45DEF /* RKSItem.m */; };
+		92BAE10518B34A9B00E45DEF /* RKSFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = 92BAE10418B34A9B00E45DEF /* RKSFeed.m */; };
+		92BAE10818B34A9B00E45DEF /* RKSChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 92BAE10718B34A9B00E45DEF /* RKSChannel.m */; };
+		92BAE10B18B34A9B00E45DEF /* RKSImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 92BAE10A18B34A9B00E45DEF /* RKSImage.m */; };
 		92BEE870188D0B7F004F2267 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92BEE86F188D0B7F004F2267 /* Foundation.framework */; };
 		92BEE872188D0B7F004F2267 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92BEE871188D0B7F004F2267 /* CoreGraphics.framework */; };
 		92BEE874188D0B7F004F2267 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92BEE873188D0B7F004F2267 /* UIKit.framework */; };
@@ -16,18 +21,13 @@
 		92BEE894188D0B7F004F2267 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92BEE873188D0B7F004F2267 /* UIKit.framework */; };
 		92BEE89C188D0B7F004F2267 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 92BEE89A188D0B7F004F2267 /* InfoPlist.strings */; };
 		92BEE89E188D0B7F004F2267 /* RestKit_SyndicateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 92BEE89D188D0B7F004F2267 /* RestKit_SyndicateTests.m */; };
-		92BEE8B8188D0C28004F2267 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92BEE8A9188D0C28004F2267 /* Main_iPad.storyboard */; };
-		92BEE8B9188D0C28004F2267 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92BEE8AB188D0C28004F2267 /* Main_iPhone.storyboard */; };
+		92BEE8B9188D0C28004F2267 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92BEE8AB188D0C28004F2267 /* Main.storyboard */; };
 		92BEE8BA188D0C28004F2267 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 92BEE8AD188D0C28004F2267 /* InfoPlist.strings */; };
 		92BEE8BB188D0C28004F2267 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92BEE8AF188D0C28004F2267 /* Images.xcassets */; };
 		92BEE8BC188D0C28004F2267 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 92BEE8B1188D0C28004F2267 /* main.m */; };
 		92BEE8BE188D0C28004F2267 /* RKSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 92BEE8B5188D0C28004F2267 /* RKSAppDelegate.m */; };
 		92BEE8BF188D0C28004F2267 /* RKSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92BEE8B7188D0C28004F2267 /* RKSViewController.m */; };
 		92F4BDC418B2454500BFD380 /* RestKitSyndicate.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 92F4BDC218B2454500BFD380 /* RestKitSyndicate.xcdatamodeld */; };
-		92F4BDE318B24A4600BFD380 /* RKSChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F4BDDC18B24A4600BFD380 /* RKSChannel.m */; };
-		92F4BDE418B24A4600BFD380 /* RKSFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F4BDDE18B24A4600BFD380 /* RKSFeed.m */; };
-		92F4BDE518B24A4600BFD380 /* RKSImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F4BDE018B24A4600BFD380 /* RKSImage.m */; };
-		92F4BDE618B24A4600BFD380 /* RKSItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F4BDE218B24A4600BFD380 /* RKSItem.m */; };
 		92F4BDE918B24AB900BFD380 /* RKSFeedManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F4BDE818B24AB900BFD380 /* RKSFeedManager.m */; };
 		92F4BDF818B24FC700BFD380 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92F4BDF718B24FC700BFD380 /* CoreData.framework */; };
 /* End PBXBuildFile section */
@@ -45,6 +45,17 @@
 /* Begin PBXFileReference section */
 		29B4DBB9E1664A1990CF526B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		352E0950BBEA4B86BAF31CA4 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		92BAE0F118B342F400E45DEF /* RKSMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKSMapper.h; sourceTree = "<group>"; };
+		92BAE0F218B342F400E45DEF /* RKSMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKSMapper.m; sourceTree = "<group>"; };
+		92BAE10018B34A9B00E45DEF /* RKSItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RKSItem.h; path = "RestKit-Syndicate/Source/RKSItem.h"; sourceTree = SOURCE_ROOT; };
+		92BAE10118B34A9B00E45DEF /* RKSItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RKSItem.m; path = "RestKit-Syndicate/Source/RKSItem.m"; sourceTree = SOURCE_ROOT; };
+		92BAE10318B34A9B00E45DEF /* RKSFeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RKSFeed.h; path = "RestKit-Syndicate/Source/RKSFeed.h"; sourceTree = SOURCE_ROOT; };
+		92BAE10418B34A9B00E45DEF /* RKSFeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RKSFeed.m; path = "RestKit-Syndicate/Source/RKSFeed.m"; sourceTree = SOURCE_ROOT; };
+		92BAE10618B34A9B00E45DEF /* RKSChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RKSChannel.h; path = "RestKit-Syndicate/Source/RKSChannel.h"; sourceTree = SOURCE_ROOT; };
+		92BAE10718B34A9B00E45DEF /* RKSChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RKSChannel.m; path = "RestKit-Syndicate/Source/RKSChannel.m"; sourceTree = SOURCE_ROOT; };
+		92BAE10918B34A9B00E45DEF /* RKSImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RKSImage.h; path = "RestKit-Syndicate/Source/RKSImage.h"; sourceTree = SOURCE_ROOT; };
+		92BAE10A18B34A9B00E45DEF /* RKSImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RKSImage.m; path = "RestKit-Syndicate/Source/RKSImage.m"; sourceTree = SOURCE_ROOT; };
+		92BAE10C18B3662900E45DEF /* RestKitSyndicate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestKitSyndicate.h; sourceTree = "<group>"; };
 		92BEE86C188D0B7F004F2267 /* RestKit-Syndicate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RestKit-Syndicate.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		92BEE86F188D0B7F004F2267 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		92BEE871188D0B7F004F2267 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -54,8 +65,7 @@
 		92BEE899188D0B7F004F2267 /* RestKit-SyndicateTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RestKit-SyndicateTests-Info.plist"; sourceTree = "<group>"; };
 		92BEE89B188D0B7F004F2267 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		92BEE89D188D0B7F004F2267 /* RestKit_SyndicateTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RestKit_SyndicateTests.m; sourceTree = "<group>"; };
-		92BEE8AA188D0C28004F2267 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		92BEE8AC188D0C28004F2267 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		92BEE8AC188D0C28004F2267 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		92BEE8AE188D0C28004F2267 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		92BEE8AF188D0C28004F2267 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		92BEE8B1188D0C28004F2267 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -66,14 +76,6 @@
 		92BEE8B6188D0C28004F2267 /* RKSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKSViewController.h; sourceTree = "<group>"; };
 		92BEE8B7188D0C28004F2267 /* RKSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKSViewController.m; sourceTree = "<group>"; };
 		92F4BDC318B2454500BFD380 /* RestKitSyndicate.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RestKitSyndicate.xcdatamodel; sourceTree = "<group>"; };
-		92F4BDDB18B24A4600BFD380 /* RKSChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKSChannel.h; sourceTree = "<group>"; };
-		92F4BDDC18B24A4600BFD380 /* RKSChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKSChannel.m; sourceTree = "<group>"; };
-		92F4BDDD18B24A4600BFD380 /* RKSFeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKSFeed.h; sourceTree = "<group>"; };
-		92F4BDDE18B24A4600BFD380 /* RKSFeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKSFeed.m; sourceTree = "<group>"; };
-		92F4BDDF18B24A4600BFD380 /* RKSImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKSImage.h; sourceTree = "<group>"; };
-		92F4BDE018B24A4600BFD380 /* RKSImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKSImage.m; sourceTree = "<group>"; };
-		92F4BDE118B24A4600BFD380 /* RKSItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKSItem.h; sourceTree = "<group>"; };
-		92F4BDE218B24A4600BFD380 /* RKSItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKSItem.m; sourceTree = "<group>"; };
 		92F4BDE718B24AB900BFD380 /* RKSFeedManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKSFeedManager.h; sourceTree = "<group>"; };
 		92F4BDE818B24AB900BFD380 /* RKSFeedManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKSFeedManager.m; sourceTree = "<group>"; };
 		92F4BDF718B24FC700BFD380 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -169,8 +171,7 @@
 		92BEE8A8188D0C28004F2267 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				92BEE8A9188D0C28004F2267 /* Main_iPad.storyboard */,
-				92BEE8AB188D0C28004F2267 /* Main_iPhone.storyboard */,
+				92BEE8AB188D0C28004F2267 /* Main.storyboard */,
 				92BEE8AD188D0C28004F2267 /* InfoPlist.strings */,
 				92BEE8AF188D0C28004F2267 /* Images.xcassets */,
 			);
@@ -211,26 +212,21 @@
 		92F4BDDA18B24A4600BFD380 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				92BAE10C18B3662900E45DEF /* RestKitSyndicate.h */,
 				92F4BDE718B24AB900BFD380 /* RKSFeedManager.h */,
 				92F4BDE818B24AB900BFD380 /* RKSFeedManager.m */,
-				92F4BDEA18B24AC300BFD380 /* DataClasses */,
+				92BAE0F118B342F400E45DEF /* RKSMapper.h */,
+				92BAE0F218B342F400E45DEF /* RKSMapper.m */,
+				92BAE10918B34A9B00E45DEF /* RKSImage.h */,
+				92BAE10A18B34A9B00E45DEF /* RKSImage.m */,
+				92BAE10618B34A9B00E45DEF /* RKSChannel.h */,
+				92BAE10718B34A9B00E45DEF /* RKSChannel.m */,
+				92BAE10318B34A9B00E45DEF /* RKSFeed.h */,
+				92BAE10418B34A9B00E45DEF /* RKSFeed.m */,
+				92BAE10018B34A9B00E45DEF /* RKSItem.h */,
+				92BAE10118B34A9B00E45DEF /* RKSItem.m */,
 			);
 			path = Source;
-			sourceTree = "<group>";
-		};
-		92F4BDEA18B24AC300BFD380 /* DataClasses */ = {
-			isa = PBXGroup;
-			children = (
-				92F4BDDB18B24A4600BFD380 /* RKSChannel.h */,
-				92F4BDDC18B24A4600BFD380 /* RKSChannel.m */,
-				92F4BDDD18B24A4600BFD380 /* RKSFeed.h */,
-				92F4BDDE18B24A4600BFD380 /* RKSFeed.m */,
-				92F4BDDF18B24A4600BFD380 /* RKSImage.h */,
-				92F4BDE018B24A4600BFD380 /* RKSImage.m */,
-				92F4BDE118B24A4600BFD380 /* RKSItem.h */,
-				92F4BDE218B24A4600BFD380 /* RKSItem.m */,
-			);
-			name = DataClasses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,10 +308,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92BEE8B9188D0C28004F2267 /* Main_iPhone.storyboard in Resources */,
+				92BEE8B9188D0C28004F2267 /* Main.storyboard in Resources */,
 				92BEE8BB188D0C28004F2267 /* Images.xcassets in Resources */,
 				92BEE8BA188D0C28004F2267 /* InfoPlist.strings in Resources */,
-				92BEE8B8188D0C28004F2267 /* Main_iPad.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,15 +362,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92BAE10B18B34A9B00E45DEF /* RKSImage.m in Sources */,
+				92BAE10518B34A9B00E45DEF /* RKSFeed.m in Sources */,
 				92BEE8BC188D0C28004F2267 /* main.m in Sources */,
+				92BAE10818B34A9B00E45DEF /* RKSChannel.m in Sources */,
+				92BAE0F318B342F400E45DEF /* RKSMapper.m in Sources */,
 				92BEE8BE188D0C28004F2267 /* RKSAppDelegate.m in Sources */,
-				92F4BDE418B24A4600BFD380 /* RKSFeed.m in Sources */,
-				92F4BDE618B24A4600BFD380 /* RKSItem.m in Sources */,
 				92BEE8BF188D0C28004F2267 /* RKSViewController.m in Sources */,
-				92F4BDE318B24A4600BFD380 /* RKSChannel.m in Sources */,
 				92F4BDC418B2454500BFD380 /* RestKitSyndicate.xcdatamodeld in Sources */,
 				92F4BDE918B24AB900BFD380 /* RKSFeedManager.m in Sources */,
-				92F4BDE518B24A4600BFD380 /* RKSImage.m in Sources */,
+				92BAE10218B34A9B00E45DEF /* RKSItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,20 +402,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		92BEE8A9188D0C28004F2267 /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				92BEE8AA188D0C28004F2267 /* Base */,
-			);
-			name = Main_iPad.storyboard;
-			sourceTree = "<group>";
-		};
-		92BEE8AB188D0C28004F2267 /* Main_iPhone.storyboard */ = {
+		92BEE8AB188D0C28004F2267 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				92BEE8AC188D0C28004F2267 /* Base */,
 			);
-			name = Main_iPhone.storyboard;
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		92BEE8AD188D0C28004F2267 /* InfoPlist.strings */ = {

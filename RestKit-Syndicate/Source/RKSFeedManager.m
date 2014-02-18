@@ -7,6 +7,7 @@
 //
 
 #import "RKSFeedManager.h"
+
 #import "RKSFeed.h"
 #import "RKSChannel.h"
 #import "RKSItem.h"
@@ -35,26 +36,18 @@
         
         // accept xml mime type and make parser add prefix _ before xml attributes
         [RKMIMETypeSerialization registerClass:[RKXMLDictionarySerialization class] forMIMEType:RKMIMETypeTextXML];
+        [RKMIMETypeSerialization registerClass:[RKXMLDictionarySerialization class] forMIMEType:RKMIMETypeXML];
+        [RKMIMETypeSerialization registerClass:[RKXMLDictionarySerialization class] forMIMEType:@"application/rss+xml"];
+        [RKMIMETypeSerialization registerClass:[RKXMLDictionarySerialization class] forMIMEType:@"application/rss"];
         [RKXMLDictionarySerialization sharedParser].attributesMode = XMLDictionaryAttributesModePrefixed;
-        
         // Enable Activity Indicator Spinner
         [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
         
         // Initialize managed object store
-        self.managedObjectModel = [NSManagedObjectModel mergedModelFromBundles:nil];
+        NSURL *modelURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"RestKitSyndicate" ofType:@"momd"]]; // §The mom and momd files are compiled versions of xcdatamodel and xcdatamodeld files.
+        self.managedObjectModel = [[[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL] mutableCopy];
         self.managedObjectStore = [[RKManagedObjectStore alloc] initWithManagedObjectModel:self.managedObjectModel];
         self.objectManager.managedObjectStore = self.managedObjectStore;
-        
-        ////////////////////////////
-        // Setup mapping
-        
-        ////////////////////////////
-        // Setup response descriptors
-        
-        ////////////////////////////
-        // Add response descriptors to manager
-        
-        
         
         /*
          Complete Core Data stack initialization
@@ -96,6 +89,36 @@
         
     }
     return self;
+}
+
+- (void)loadFeedAtPath:(NSString*)feedPath ofType:(RKSFeedType)feedType withRootKeyPath:(NSString*)rootKeyPath andParameters:(NSDictionary*)parameters andCompletionBlock:(void (^)(RKSFeed *feed, NSError *error, BOOL isOld))completionBlock
+{
+    ///////////////////////////
+    // Setup mapping
+    RKEntityMapping *feedMapping = [RKSMapper entityMappingForFeedType:feedType inManagedObjectStore:self.managedObjectStore];
+    
+    ////////////////////////////
+    // Setup response descriptors
+    RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:feedMapping
+                                                                                            method:RKRequestMethodGET
+                                                                                       pathPattern:feedPath
+                                                                                           keyPath:rootKeyPath
+                                                                                       statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
+    
+    ////////////////////////////
+    // Add response descriptors to manager
+    [self.objectManager addResponseDescriptor:responseDescriptor];
+    
+    [self.objectManager getObjectsAtPath:feedPath parameters:parameters success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+        id mappedFeed = [mappingResult firstObject];
+        if ([mappedFeed isKindOfClass:[RKSFeed class]])
+            completionBlock(mappedFeed, nil, NO);
+    } failure:^(RKObjectRequestOperation *operation, NSError *error) {
+        NSLog(@"Failure time");
+        // TODO: possibly fetch older results on failure and send them marked as old
+        // nil for now
+        completionBlock(nil, error, YES);
+    }];
 }
 
 @end

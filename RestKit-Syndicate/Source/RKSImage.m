@@ -2,7 +2,7 @@
 //  RKSImage.m
 //  RestKit-Syndicate
 //
-//  Created by Denis Zamataev on 2/17/14.
+//  Created by Denis Zamataev on 2/18/14.
 //  Copyright (c) 2014 DZamataev. All rights reserved.
 //
 
@@ -14,9 +14,9 @@
 
 @implementation RKSImage
 
-@dynamic linkAttribute;
-@dynamic titleAttribute;
-@dynamic urlAttribute;
+@dynamic link;
+@dynamic title;
+@dynamic url;
 @dynamic channels;
 @dynamic feeds;
 @dynamic items;
