@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <RestKit/CoreData.h>
 #import <RestKit.h>
 
 @class RKSFeed, RKSChannel, RKSItem, RKSImage;

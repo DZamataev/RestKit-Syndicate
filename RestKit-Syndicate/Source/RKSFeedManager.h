@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <RestKit.h>
 #import <RestKit/CoreData.h>
+#import <RestKit.h>
 #import <RKXMLDictionarySerialization.h>
 #import "RKSMapper.h"
 
