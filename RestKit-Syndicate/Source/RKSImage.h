@@ -2,7 +2,7 @@
 //  RKSImage.h
 //  RestKit-Syndicate
 //
-//  Created by Denis Zamataev on 2/18/14.
+//  Created by Denis Zamataev on 2/20/14.
 //  Copyright (c) 2014 DZamataev. All rights reserved.
 //
 
