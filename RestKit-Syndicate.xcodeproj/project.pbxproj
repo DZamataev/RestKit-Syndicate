@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		07F1258EC0DB41AE94664FA4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29B4DBB9E1664A1990CF526B /* libPods.a */; };
+		921E783318E36C7F0058B273 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 921E783218E36C7F0058B273 /* MobileCoreServices.framework */; };
+		921E783518E36C8C0058B273 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 921E783418E36C8C0058B273 /* SystemConfiguration.framework */; };
 		9255273418B64045006D1191 /* RKSFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = 9255273318B64045006D1191 /* RKSFeed.m */; };
 		9255273718B64046006D1191 /* RKSItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9255273618B64046006D1191 /* RKSItem.m */; };
 		9255273A18B64046006D1191 /* RKSChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9255273918B64046006D1191 /* RKSChannel.m */; };
@@ -45,6 +47,8 @@
 /* Begin PBXFileReference section */
 		29B4DBB9E1664A1990CF526B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		352E0950BBEA4B86BAF31CA4 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		921E783218E36C7F0058B273 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		921E783418E36C8C0058B273 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		9255273218B64045006D1191 /* RKSFeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RKSFeed.h; path = "RestKit-Syndicate/Source/RKSFeed.h"; sourceTree = SOURCE_ROOT; };
 		9255273318B64045006D1191 /* RKSFeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RKSFeed.m; path = "RestKit-Syndicate/Source/RKSFeed.m"; sourceTree = SOURCE_ROOT; };
 		9255273518B64046006D1191 /* RKSItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RKSItem.h; path = "RestKit-Syndicate/Source/RKSItem.h"; sourceTree = SOURCE_ROOT; };
@@ -86,6 +90,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				921E783518E36C8C0058B273 /* SystemConfiguration.framework in Frameworks */,
+				921E783318E36C7F0058B273 /* MobileCoreServices.framework in Frameworks */,
 				92F4BDF818B24FC700BFD380 /* CoreData.framework in Frameworks */,
 				92BEE872188D0B7F004F2267 /* CoreGraphics.framework in Frameworks */,
 				92BEE874188D0B7F004F2267 /* UIKit.framework in Frameworks */,
@@ -131,6 +137,8 @@
 		92BEE86E188D0B7F004F2267 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				921E783418E36C8C0058B273 /* SystemConfiguration.framework */,
+				921E783218E36C7F0058B273 /* MobileCoreServices.framework */,
 				92F4BDF718B24FC700BFD380 /* CoreData.framework */,
 				92BEE86F188D0B7F004F2267 /* Foundation.framework */,
 				92BEE871188D0B7F004F2267 /* CoreGraphics.framework */,
@@ -276,7 +284,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = RKS;
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = DZamataev;
 				TargetAttributes = {
 					92BEE88F188D0B7F004F2267 = {
@@ -425,7 +433,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -465,7 +472,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -526,7 +532,6 @@
 		92BEE8A5188D0B7F004F2267 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RestKit-Syndicate.app/RestKit-Syndicate";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -549,7 +554,6 @@
 		92BEE8A6188D0B7F004F2267 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RestKit-Syndicate.app/RestKit-Syndicate";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
